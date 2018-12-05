@@ -76,7 +76,7 @@ func RegisterPatientRoutes(api *gin.RouterGroup, adapters ...ie.Adapter) {
 // }
 
 func RegisterCareTeamRoutes(api *gin.RouterGroup, careTeams ie.Adapter) {
-	ct := api.Group("/care_teams")
+	ct := api.Group("/care_teamss")
 	ct.GET("", ie.Adapt(ListAllCareTeams, careTeams))
 	ct.POST("", ie.Adapt(CreateCareTeam, careTeams))
 	ct.GET("/:id", ie.Adapt(GetCareTeam, careTeams))
